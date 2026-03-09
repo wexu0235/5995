@@ -1,0 +1,13 @@
+\section{How the Vulnerability Was Found}
+
+We first decompiled the APK and inspected the manifest, package structure, and
+security-relevant classes such as login, registration, and session-handling
+components. We then performed a targeted static analysis to locate values
+treated as random, codes, tokens, identifiers, or keys.
+
+AI assistance was used to help choose tooling, refine search strategy, and
+evaluate whether particular generator APIs or helper methods were appropriate
+for security-sensitive use. For each candidate location, we recorded the class,
+method, generator API, and the security role of the generated value. This
+workflow allowed us to identify at least one weak use of randomness that was
+relevant to application security.
