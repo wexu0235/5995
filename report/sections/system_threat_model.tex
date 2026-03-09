@@ -1,0 +1,14 @@
+\section{System and Threat Model}
+
+The target system is an Android application with user-facing components such as
+login, registration, and session-related logic. Relevant assets may include user
+credentials, authentication tokens, reset codes, session identifiers, or any
+other security-sensitive values used to control access.
+
+We assume an attacker can obtain and decompile the APK, inspect the application
+logic, and observe how random-looking values are generated and used. Depending
+on the implementation, the attacker may also interact with the application as a
+normal user, monitor outputs, or replay predictable values. The attacker's goal
+is to exploit weak randomness or insecure value generation to bypass
+authentication, impersonate another user, or otherwise compromise protected
+assets.
