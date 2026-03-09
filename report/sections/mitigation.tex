@@ -1,0 +1,12 @@
+\section{Fix and Mitigation}
+
+The vulnerable generator should be replaced with a secure alternative that is
+appropriate for security-sensitive randomness. In practice, this means using a
+cryptographically secure source of randomness for tokens, codes, session
+identifiers, or related values, rather than predictable or weak generators.
+
+This fix works because a secure generator makes the output computationally
+difficult to predict, even when the attacker knows the implementation strategy.
+In addition, security-sensitive values should be generated only for clearly
+defined roles, validated on the correct trust boundary, and designed with
+sufficient entropy for the intended threat model.
